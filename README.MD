@@ -1,7 +1,19 @@
 Notes
 =====
 
++ Despite the feature spec saying journals should be "ordered by their score across a range of years", there is no
+scenario which defines this, so I've stuck to single-years; the implementation for this is just a slightly more complex
+comparator that takes start and end years (or a list of years or something) and sums or averages the scores across these
+years.
 
++ A NPE will be thrown if a journal doesn't have a score for a particular year; this is easy to check for, but all the
+given examples have values for all journals and it would only get in the way in this exercise.
+
++ The natural way to represent scores is to create a Score entity with a corresponding table in a relational database,
+with 3 columns: journalId, year, score.  Given we're not using a database, it wasn't necessary to do this.
+
++ The return type of the JournalRankingService is horrible.  It would be much better to shift around ordered lists of
+Journals, and to push the ranking logic into the presentation layer.
 
 Exercise
 ========
