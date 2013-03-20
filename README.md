@@ -38,47 +38,47 @@ journal’s name.
 
 Given the following journals have scores for 2010:
 
-Journal A = 5.6
-Journal B = 2.4
-Journal C = 3.1
+Journal A = 5.6  
+Journal B = 2.4  
+Journal C = 3.1  
 
 When the user views the ranked journals
 Then the order and rank should be:
 
-Rank Journal Score
-1 Journal A 5.6
-2 Journal C 3.1
-3 Journal B 2.4
+Rank Journal Score  
+1 Journal A 5.6  
+2 Journal C 3.1  
+3 Journal B 2.4  
 
 ### Scenario 2: Rank journals with a shared rank
 
 Given the following journals have scores for 2009:
 
-Journal A = 2.2
-Journal B = 6.2
-Journal C = 6.2
+Journal A = 2.2  
+Journal B = 6.2  
+Journal C = 6.2  
 
 When the user views the ranked journals
 Then the order should be determined by score then journal name:
 
-Rank Journal Score
-1 Journal B 6.2
-1 Journal C 6.2
-3 Journal A 2.2
+Rank Journal Score  
+1 Journal B 6.2  
+1 Journal C 6.2  
+3 Journal A 2.2  
 
 ### Scenario 3: Rank journals excluding review journals
 
 Given the following journals have scores for 2008:
 
-Journal A = 5.6
-Journal B = 2.4
-Journal C = 3.1
+Journal A = 5.6  
+Journal B = 2.4  
+Journal C = 3.1  
 
 And Journal A is a review journal
 When the journals are ranked
 Then the order should be:
 
-Rank Journal Score
-1 Journal C 3.1
-2 Journal B 2.4
+Rank Journal Score  
+1 Journal C 3.1  
+2 Journal B 2.4  
 
